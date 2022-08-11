@@ -3,6 +3,7 @@
 
 .button {
 	font-family: Lato;
+	// min-width: rem(142);
 	font-weight: 500;
 	display: inline-flex;
 	padding: rem(19.8) rem(24);
@@ -31,4 +32,24 @@
 	&._fw {
 		width: 100%;
 	}
+	@media (max-width:$tablet){
+		padding: rem(17) rem(12);
+		&_border{
+			padding: rem(17) rem(30);
+			}
+		}
+
+		@media (max-width:$mobile){
+			padding: rem(17) rem(12);
+			&_border{
+				padding: rem(15) rem(22);
+			}
+		}
+
+		@media (max-width:$mobileSmall){
+			padding: rem(17) rem(12);
+			&_border{
+				padding: rem(12) rem(15);
+			}
+		}
 }
