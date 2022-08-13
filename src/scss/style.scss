@@ -95,10 +95,11 @@ body {
 Например header__container, main__container и т.д.
 Снипет (HTML): cnt
 */
-[class*="__container-big"] {
+[class*="__container"] {
 	max-width: rem(1420);
 	box-sizing: content-box;
 	margin: 0 auto;
+	padding: 0 rem(15);
 }
 
 @if ($responsiveType==1) {

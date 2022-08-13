@@ -4,6 +4,10 @@
 
 	&__main {
 	}
+
+	&__partners {
+		@include adaptiveValue("padding-bottom",200 , 30);
+	}
 }
 
 .title {
