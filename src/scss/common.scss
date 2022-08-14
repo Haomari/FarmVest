@@ -6,9 +6,15 @@
 	}
 
 	&__partners {
-		@include adaptiveValue("padding-bottom",200 , 30);
+		@include adaptiveValue("padding-bottom",200 , 50);
+	}
+
+	&__how {
+		@include adaptiveValue("padding-bottom",100 , 25);
 	}
 }
+
+
 
 .title {
 	font-weight: 600;
@@ -16,7 +22,16 @@
 	line-height: math.div(63 ,70);
 	color: rgb(252, 252, 252);
 	@include adaptiveValue("font-size", 70, 45);
+	&_s64{
+		@include adaptiveValue("font-size", 64, 40);
+	}
 	span {
 		color: $greenColor;
 	}
+}
+
+
+
+.text {
+	line-height: 180%;
 }
