@@ -12,6 +12,11 @@
 	&__how {
 		@include adaptiveValue("padding-bottom",100 , 25);
 	}
+
+	&__pathway {
+		@include adaptiveValue("padding-top", 100, 25);
+		@include adaptiveValue("padding-bottom",100 , 25);
+	}
 }
 
 
