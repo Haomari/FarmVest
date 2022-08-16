@@ -77,7 +77,7 @@
     }
 
     &_3 {
-      top: percent(134, 974);
+      top: percent(164, 974);
       left: percent(1150, 1620);
     }
 
@@ -226,6 +226,14 @@
     font-size: rem(20);
     font-weight: 700;
 
+		&_href{
+			display: inline-block;
+
+			&:hover{
+				text-decoration: underline;
+			}
+		}
+
     &:not(:last-child) {
       margin-bottom: rem(16);
     }
@@ -341,7 +349,13 @@
 	}
 
 	&__content {
+		@media (max-width:$tablet){
+			order: -1;
+		}
 		@include adaptiveValue("padding-left", 126, 30, 2, 1420, 992);
+		@media (max-width:$mobileSmall){
+			text-align: center;
+		}
 	}
 
   &__title {
@@ -357,6 +371,8 @@
   }
 
 	&__spollers {
+		display: grid;
+		gap: rem(24);
 	}
 }
 .image-block {
@@ -378,12 +394,47 @@
 .spollers-pathway {
 
 	&__title {
+		display: block;
+		font-size: rem(24);
+		line-height: 177%;
+		background: rgba(255, 255, 255, 0.05);
+		padding: rem(24) rem(30);
+		border-radius: rem(10);
+		width: 100%;
+		text-align: left;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		&::after{
+			content:'';
+			background: url('@img/page__pathway/spollers/arrow-down.svg') center / 100% no-repeat;
+			flex: 0 0 rem(24);
+			height: rem(24);
+			transition: all 0.4s ease 0s;
+		}
+		&._spoller-active{
+			border-radius: rem(10) rem(10) 0 0;
+			&::after{
+				transform: scaleY(-1);
+			}
+		}
+		@media (max-width:$mobileSmall){
+			padding: rem(18) rem(20);
+			line-height: 130%;
+		}
 	}
 
 	&__body {
+		padding: rem(0) rem(30) rem(24) rem(30);
+		border-radius: 0 0 rem(10) rem(10);
+		@media (max-width:$mobileSmall){
+			padding: rem(0) rem(20) rem(18) rem(20);
+		}
 	}
 
 	&__item {
+		background: rgba(255, 255, 255, 0.05);
+		border-radius: 0 0 rem(10) rem(10);
 	}
 }
 
