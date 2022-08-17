@@ -17,6 +17,16 @@
 		@include adaptiveValue("padding-top", 100, 25);
 		@include adaptiveValue("padding-bottom",100 , 25);
 	}
+
+	&__why {
+		@include adaptiveValue("padding-top", 100, 25);
+		@include adaptiveValue("padding-bottom",100 , 25);
+	}
+
+	&__reviews {
+		@include adaptiveValue("padding-top", 100, 25);
+		@include adaptiveValue("padding-bottom",200 , 50);
+	}
 }
 
 
@@ -33,10 +43,17 @@
 	span {
 		color: $greenColor;
 	}
+	@media (max-width:$mobileSmall){
+		text-align: center;
+	}
 }
 
 
 
 .text {
 	line-height: 180%;
+	
+	@media (max-width:$mobileSmall){
+		text-align: center;
+	}
 }
