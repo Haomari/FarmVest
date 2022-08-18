@@ -27,6 +27,11 @@
 		@include adaptiveValue("padding-top", 100, 25);
 		@include adaptiveValue("padding-bottom",200 , 50);
 	}
+
+	&__download {
+		@include adaptiveValue("padding-top", 100, 25);
+		@include adaptiveValue("padding-bottom",200 , 50);
+	}
 }
 
 
@@ -39,6 +44,9 @@
 	@include adaptiveValue("font-size", 70, 45);
 	&_s64{
 		@include adaptiveValue("font-size", 64, 40);
+	}
+	&_56{
+		@include adaptiveValue("font-size", 56, 35);
 	}
 	span {
 		color: $greenColor;
