@@ -25,12 +25,12 @@
 
 	&__reviews {
 		@include adaptiveValue("padding-top", 100, 25);
-		@include adaptiveValue("padding-bottom",200 , 50);
+		@include adaptiveValue("padding-bottom",100 , 25);
 	}
 
 	&__download {
 		@include adaptiveValue("padding-top", 100, 25);
-		@include adaptiveValue("padding-bottom",200 , 50);
+		@include adaptiveValue("padding-bottom",200 , 40);
 	}
 }
 

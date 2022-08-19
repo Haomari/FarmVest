@@ -1,3 +1,164 @@
 //====================================================================================================
+.footer {
+  background: rgba(53, 64, 70, 0.5);
+  @include adaptiveValue("padding-top", 68, 25);
+  @include adaptiveValue("padding-bottom", 56, 30);
+
+  &__container-big {}
+
+  &__main {
+    @include adaptiveValue("padding-bottom", 100, 30);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.42);
+    ;
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    @include adaptiveValue("height", 72, 30, 2, 1620, 767.98);
+		gap: rem(30);
+		@media (max-width:$mobile){
+			padding-top: rem(10);
+			@include adaptiveValue("padding-top", 30, 10, 2, 767.98, 280);
+			flex-direction: column-reverse;
+			justify-content: flex-end;
+			align-items: center;
+		}
+  }
+
+  &__copy {
+    font-weight: 300;
+    font-size: rem(12);
+    line-height: math.div(13, 12);
+  }
+
+  &__menu {}
+}
+
+.main-footer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: rem(40);
+	column-gap: rem(20);
+	@media (max-width:$tablet){
+		grid-template-columns: repeat(2, 1fr);
+	}
+	@media (max-width:$mobileSmall){
+		grid-template-columns: 1fr
+	}
+
+  &__info {
+    max-width: rem(330);
+  }
+
+  &__logo {
+    display: inline-block;
+
+    &:not(:last-child) {
+      margin-bottom: rem(24);
+    }
+  }
+
+  &__text {
+		text-align: left;
+	}
+
+  &__form {
+    max-width: rem(533);
+		@media (max-width:$tablet){
+			order: 3;
+		}
+		@media (max-width:$tablet) and (min-width:$mobileSmall) {
+			grid-column: span 2;
+			justify-self: center;
+			max-width: none;
+		}
+
+  }
+
+  &__contacts {
+    justify-self: end;
+    max-width: rem(363);
+    display: flex;
+    @include adaptiveValue("gap", 48, 20);
+		@media (max-width: em(1180)){
+			flex-direction: column;
+		}
+		@media (max-width:$tablet){
+			order: 2;
+		}
+		@media (max-width:$mobileSmall){
+			justify-self: start;
+		}
+  }
+
+  &__social {}
+
+  &__lable {
+    font-weight: 700;
+    font-size: rem(16);
+
+    &:not(:last-child) {
+      margin-bottom: rem(24);
+    }
+  }
+
+  &__call-us {}
+
+  &__phone {}
+}
+
+.form-main {
+
+  &__text {
+    &:not(:last-child) {
+      margin-bottom: rem(24);
+    }
+
+    max-width: rem(438);
+		@media (max-width:$tablet){
+			max-width: none;
+		}
+  }
+
+  &__form {}
+}
+
+.social {
+  display: flex;
+	gap: rem(16);
+
+  &__item {
+    background: #FFFFFF;
+    border-radius: 50%;
+    width: rem(48);
+    height: rem(48);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+    img {
+
+    }
+  }
+}
+
+.menu-footer {
+
+  &__list {
+    display: flex;
+		flex-wrap: wrap;
+		@include adaptiveValue("gap", 40, 15);
+		justify-content: center;
+  }
+
+  &__item {}
+
+  &__link {
+    font-size: rem(14);
+    line-height: math.div(16, 14);
+  }
+}
 
 //====================================================================================================
